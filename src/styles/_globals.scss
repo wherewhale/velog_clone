@@ -1,0 +1,70 @@
+@import './theme/color';
+@import './base';
+@import './reset';
+@import './font';
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Noto Sans',
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+}
+
+.slickDots {
+  position: relative;
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+
+  bottom: 30px;
+  column-gap: 12px;
+  list-style: none;
+  padding: 0 30px 0 0;
+
+  > li {
+    display: inline-block;
+
+    cursor: pointer;
+  }
+
+  > li > button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    border-radius: 100%;
+    padding: 5px;
+    cursor: pointer;
+    border: unset;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background-color: $C_WHITE;
+  }
+}
+.slickDots li.slick-active > button {
+  opacity: 1;
+  background-color: $C_POINT;
+  width: 40px;
+  border-radius: 10px;
+  transition: ease-out width 0.5s;
+}
