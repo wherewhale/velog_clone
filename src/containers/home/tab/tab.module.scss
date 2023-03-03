@@ -1,0 +1,14 @@
+@use 'src/styles/theme/color' as c;
+@use 'src/styles/mixins/fonts' as f;
+
+.container {
+  width: 20rem;
+  background: c.$C_bg-element1;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
+  transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+  margin: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

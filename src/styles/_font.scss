@@ -1,7 +1,11 @@
-// mixin 사용해서 설정해야 함.
+$Bold: 700;
+$Medium: 500;
+$Regular: 400;
 
-// @font-face {
-//   font-family: 'Noto Sans';
-//   font-weight: 300;
-//   src: url('/public/static/fonts/NotoSansKR-Light.otf') format('otf');
-// }
+@mixin font($weight) {
+  @font-face {
+    font-family: 'FiraMono';
+    font-weight: $weight;
+    src: url('/public/static/fonts/FiraMono-#{weight}.otf') format('otf');
+  }
+}

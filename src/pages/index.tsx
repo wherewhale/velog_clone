@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Header from '@/components/header';
+import Layout from '@/components/layout/home';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       </Head>
       <main>
         <Header />
+        <Layout>여기는 레이아웃 안</Layout>
       </main>
     </>
   );
