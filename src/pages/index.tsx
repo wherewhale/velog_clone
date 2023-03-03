@@ -1,7 +1,8 @@
 import Head from 'next/head';
 
 import Header from '@/components/header';
-import Layout from '@/components/layout/home';
+import Filter from '@/containers/home/filter';
+import Layout from '@/containers/home/layout';
 
 const Home = () => {
   return (
@@ -14,7 +15,9 @@ const Home = () => {
       </Head>
       <main>
         <Header />
-        <Layout>여기는 레이아웃 안</Layout>
+        <Layout>
+          <Filter />
+        </Layout>
       </main>
     </>
   );
