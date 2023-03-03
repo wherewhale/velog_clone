@@ -1,0 +1,13 @@
+.wrapper {
+  height: 4rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 1440px) {
+    width: 1024px;
+  }
+  @media (max-width: 1919px) {
+    width: 1376px;
+  }
+}

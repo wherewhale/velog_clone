@@ -1,6 +1,8 @@
 import Head from 'next/head';
 
-export default function Home() {
+import Header from '@/components/header';
+
+const Home = () => {
   return (
     <>
       <Head>
@@ -9,7 +11,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>여기는 메인 입니다</main>
+      <main>
+        <Header />
+      </main>
     </>
   );
-}
+};
+
+export default Home;

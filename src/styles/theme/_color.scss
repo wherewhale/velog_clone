@@ -4,6 +4,55 @@
 // $S -> size ( width, height 등 )
 // constant의 경우 대문자로 작성해 주세요.
 
-$C_POINT: #fed714;
+//Background
+$C_bg-page1: #121212;
+$C_bg-page2: #121212;
+$C_bg-element1: #1e1e1e;
+$C_bg-element2: #1e1e1e;
+$C_bg-element3: #252525;
+$C_bg-element4: #2e2e2e;
+$C_bg-element5: #f1f3f5;
+$C_bg-element6: #f8f9fa;
+$C_bg-element7: #252525;
+$C_bg-element8: #0c0c0c;
+$C_bg-invert: #ffffff;
+$C_bg-inline-code: #363636;
+$C_bg-tag: #252525;
 
-$C_WHITE: #fff;
+//Text
+$C_text1: #ececec;
+$C_text2: #d9d9d9;
+$C_text3: #acacac;
+$C_text4: #595959;
+
+//Border
+$C_border1: #e0e0e0;
+$C_border2: #a0a0a0;
+$C_border3: #4d4d4d;
+$C_border4: #2a2a2a;
+
+//ETC
+$C_primary1: #96f2d7;
+$C_primary2: #63e6be;
+$C_destructive1: #ffc9c9;
+$C_destructive2: #ffa8a8;
+$C_button-text: #121212;
+$C_slight-layer: rgba(255, 255, 255, 0.1);
+$C_opaque-layer: rgba(0, 0, 0, 0.85);
+$C_editor-footer: #2e2e2e;
+
+//Prism
+$C_prism-bg: #1e1e1e;
+$C_prism-default-text: #e0e6f1;
+$C_prism-selection-bg: #383e49;
+$C_prism-code-block-bg: #1e1e1e;
+$C_prism-code-1: #7c858d;
+$C_prism-code-2: #abb2bf;
+$C_prism-code-3: #e06c75;
+$C_prism-code-4: #d19a66;
+$C_prism-code-5: #98c379;
+$C_prism-code-6: #56b6c2;
+$C_prism-code-7: #c678dd;
+$C_prism-code-8: #61afef;
+$C_prism-code-9: #c678dd;
+$C_prism-line-number: #5c6370;

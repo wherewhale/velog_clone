@@ -1,34 +1,11 @@
-@mixin S12_Light {
-  font-size: 12px;
-  font-weight: 300;
-}
+//FIXME: 폰트 mixin 적용 방식 변경
 
-@mixin S16_Light {
-  font-size: 16px;
-  font-weight: 300;
-}
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
 
-@mixin S18_Light {
-  font-size: 18px;
-  font-weight: 300;
-}
-
-@mixin S14_Regular {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-@mixin S16_Medium {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-@mixin S18_Medium {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-@mixin S26_Bold {
-  font-size: 26px;
-  font-weight: 700;
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
 }
