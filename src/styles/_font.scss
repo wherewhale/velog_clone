@@ -1,11 +1,16 @@
-$Bold: 700;
-$Medium: 500;
-$Regular: 400;
+@font-face {
+  font-family: 'FiraMono';
+  font-weight: 700;
+  src: url('/public/static/fonts/FiraMono-Bold.ttf') format('ttf');
+}
 
-@mixin font($weight) {
-  @font-face {
-    font-family: 'FiraMono';
-    font-weight: $weight;
-    src: url('/public/static/fonts/FiraMono-#{weight}.otf') format('otf');
-  }
+@font-face {
+  font-family: 'FiraMono';
+  font-weight: 500;
+  src: url('/public/static/fonts/FiraMono-Medium.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'FiraMono';
+  font-weight: 700;
+  src: url('/public/static/fonts/FiraMono-Light.ttf') format('ttf');
 }

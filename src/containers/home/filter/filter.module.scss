@@ -3,7 +3,6 @@
 
 .topContainer {
   margin-top: 1.5rem;
-  display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
@@ -11,6 +10,7 @@
   position: relative;
   .rankContainer {
     display: flex;
+
     .rankWrapper {
       width: 7rem;
       display: flex;
@@ -29,7 +29,14 @@
       }
     }
   }
-  .listContainer {
-    display: flex;
+  .underBar {
+    width: 112px;
+    height: 2px;
+    background-color: c.$C_border1;
+    transition: all ease 0.3s 0s;
+    &.changed {
+      margin-left: 112px;
+      transition: all ease 0.3s 0s;
+    }
   }
 }

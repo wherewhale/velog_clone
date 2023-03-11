@@ -10,6 +10,7 @@ import styles from './filter.module.scss';
 const Filter: React.FC = () => {
   const [domLoaded, setDomLoaded] = useState(false);
   const [tab, setTab] = useState('TRENDING');
+  const [underBar, setUnderBar] = useState(String);
 
   const [selectedTab, setSelectedTab] = useRecoilState(TAB);
 
@@ -21,6 +22,11 @@ const Filter: React.FC = () => {
     return () => {
       setTab(tab);
       setSelectedTab(tab);
+      if (tab === 'NEW') {
+        setUnderBar('changed');
+      } else {
+        setUnderBar('');
+      }
     };
   }, []);
 
@@ -39,7 +45,7 @@ const Filter: React.FC = () => {
                 최신
               </div>
             </div>
-            ...
+            <div className={cx(styles.underBar, styles[underBar])} />
           </div>
           <div className={styles.listContainer}>
             <List />

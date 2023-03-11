@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 import Header from '@/components/header';
+import Layout from '@/components/layout';
 import Filter from '@/containers/home/filter';
-import Layout from '@/containers/home/layout';
 
 const Home = () => {
   return (
