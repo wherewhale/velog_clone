@@ -11,3 +11,5 @@ export const api = axios.create({
 export const getPosts = () => api.get('/posts').then((res) => res.data);
 
 export const updatePosts = async (n: number) => await api.get(`/posts?_page=${n}&_limit=10`).then((res) => res.data);
+
+export const getPost = async (id: string) => await api.get(`/posts/${id}`).then((res) => res.data);

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Fragment, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useInfiniteQuery } from 'react-query';
@@ -52,7 +53,9 @@ const List = () => {
         data.pages.map((posts, index) => (
           <Fragment key={index}>
             {posts.map((post) => (
-              <Tab key={post.id} label={post.title} contents={post.body} />
+              <Link key={post.id} href={{ pathname: '/post', query: { id: post.id } }}>
+                <Tab label={post.title} contents={post.body} />
+              </Link>
             ))}
           </Fragment>
         ))}
