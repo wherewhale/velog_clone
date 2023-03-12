@@ -5,9 +5,9 @@ import { useRecoilState } from 'recoil';
 
 import List from '../list';
 import { TAB } from '../state';
-import styles from './filter.module.scss';
+import styles from './sorting.module.scss';
 
-const Filter: React.FC = () => {
+const Sorting: React.FC = () => {
   const [domLoaded, setDomLoaded] = useState(false);
   const [tab, setTab] = useState('TRENDING');
   const [underBar, setUnderBar] = useState(String);
@@ -56,4 +56,4 @@ const Filter: React.FC = () => {
   );
 };
 
-export default Filter;
+export default Sorting;

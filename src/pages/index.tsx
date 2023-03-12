@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import Header from '@/components/header';
 import Layout from '@/components/layout';
-import Filter from '@/containers/home/filter';
+import Sorting from '@/containers/home/sorting';
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <main>
         <Header />
         <Layout>
-          <Filter />
+          <Sorting />
         </Layout>
       </main>
     </>

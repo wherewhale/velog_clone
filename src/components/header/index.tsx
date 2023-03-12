@@ -3,14 +3,14 @@ import Logo from './logo';
 
 const Header = () => {
   return (
-    <div className={styles.wrapper}>
+    <header className={styles.wrapper}>
       <Logo />
-      <div>
+      <nav>
         <div>달</div>
         <div>돋보기</div>
         <div>로그인</div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

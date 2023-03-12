@@ -14,7 +14,11 @@ interface IPostProps {
   body: string;
 }
 
-const List = () => {
+interface Props {
+  sort: string;
+}
+
+const List = ({ sort }: Props) => {
   const { ref, inView } = useInView({ threshold: 0.1 });
   // ref는 target을 지정할 element에 지정한다.
   //inView type은 boolean으로 root(뷰포트)에 target(ref를 지정한 element)이 들어오면 true로 변환됨
