@@ -1,0 +1,42 @@
+@use 'src/styles/theme/color' as c;
+@use 'src/styles/mixins/fonts' as f;
+
+.topContainer {
+  margin-top: 1.5rem;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  .rankContainer {
+    display: flex;
+
+    .rankWrapper {
+      width: 7rem;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      text-decoration: none;
+      color: c.$C_text3;
+      height: 3rem;
+      cursor: pointer;
+      &.isSelected {
+        color: c.$C_text1;
+        font-weight: bold;
+      }
+    }
+  }
+  .underBar {
+    width: 112px;
+    height: 2px;
+    background-color: c.$C_border1;
+    transition: all ease 0.3s 0s;
+    &.changed {
+      margin-left: 112px;
+      transition: all ease 0.3s 0s;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.container {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  @media (max-width: 1440px) {
+    width: 1024px;
+  }
+  @media (min-width: 1441px) and (max-width: 1919px) {
+    width: 1376px;
+  }
+}
