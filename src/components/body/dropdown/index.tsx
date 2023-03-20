@@ -1,5 +1,5 @@
 import cs from 'classnames';
-import { memo, useCallback, useEffect, useState } from 'react';
+import { memo, ReactElement, useCallback, useEffect, useState } from 'react';
 
 import useOutsideClick from '@/hooks/useOutsideClick'; //드롭다운 바깥쪽을 클릭했을 때, 닫아주는 custom hook
 
@@ -22,7 +22,7 @@ interface Props<T extends DropdownItem> {
   selected: T;
 }
 
-const RefineItemType = <T extends DropdownItem>(item: T) => {
+const RefineItemType = <T extends SingleItem>(item: T): string => {
   if (typeof item === 'number') {
     return item.toString();
   } else {
@@ -30,7 +30,7 @@ const RefineItemType = <T extends DropdownItem>(item: T) => {
   }
 };
 
-const Dropdown = ({ items, selected }: Props) => {
+const Dropdown = <T extends DropdownItem>({ items, selected }: Props<T>): ReactElement => {
   const [isOpen, setIsOpen] = useState('closed');
   const [label, setLabel] = useState('드롭다운 테스트');
   const [icon, setIcon] = useState('▼');
