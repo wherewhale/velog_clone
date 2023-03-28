@@ -1,0 +1,56 @@
+@use 'src/styles/theme/color' as c;
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+
+  .button {
+    width: 200px;
+    height: 60px;
+    background-color: c.$C_destructive1;
+    border-radius: 16px;
+    border: 2px solid c.$C_border3;
+    color: c.$C_text4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:active {
+      background-color: c.$C_destructive2;
+      color: c.$C_text2;
+    }
+  }
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  color: c.$C_bg-element1;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .subTitle {
+    margin-top: 20px;
+    font-size: 20px;
+    color: c.$C_bg-element3;
+  }
+
+  .content {
+    width: 80%;
+    height: 200px;
+    border: 1px solid c.$C_bg-element1;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+  }
+}
