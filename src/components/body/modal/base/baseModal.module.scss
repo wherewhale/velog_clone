@@ -10,7 +10,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +19,7 @@
   position: relative;
   border: 2px solid c.$C_border3;
   border-radius: 10px;
+  background-color: c.$C_bg-element5;
   z-index: 3;
   transition: border 1s;
 }

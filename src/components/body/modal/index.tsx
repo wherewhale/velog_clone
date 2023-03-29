@@ -7,11 +7,15 @@ import BaseModal from './base';
 import styles from './modal.module.scss';
 
 interface Props {
+  width?: number;
+  height?: number;
+  isOutClose?: boolean; //기본값은 false
+  background?: string | 'none';
   modalElement: ReactNode; //모달의 시작점을 받을 Element
   children: ReactNode; //모달의 Children으로 받을 매개체
 }
 
-const Modal = ({ modalElement, children }: Props) => {
+const Modal = ({ width, height, isOutClose, background, modalElement, children }: Props) => {
   const [isOpen, setIsOpen] = useState(false); //모달의 열린 상태를 관리할 state
   const [container, setContainer] = useState<Element | null>(null); //container 상태를 저장할 state 생성
 
@@ -29,6 +33,8 @@ const Modal = ({ modalElement, children }: Props) => {
   }, []);
 
   const onClose = useCallback(() => {
+    //onClose와 onOpen을 합쳐서, 함수를 구성하게 되면, 매개변수를 넣어야 하기 때문에, 새로 렌더링이 될 수도 있지 않을까?
+    //FIXME: 두 개를 선언할 것인가, 매개변수를 추가하여 하나로 구성하되, 새로 렌더링 되지 않도록 구성해야 할까?
     setIsOpen(false);
   }, []);
 
@@ -41,7 +47,7 @@ const Modal = ({ modalElement, children }: Props) => {
       <div onClick={onOpen}>{modalElement}</div>
       {isOpen && (
         <ModalPortal container={container} key="transition-group-content">
-          <BaseModal width={500} height={400} background="#fff" isOutClose={true} onClose={onClose}>
+          <BaseModal width={width} height={height} background={background} isOutClose={isOutClose} onClose={onClose}>
             <button className={styles.icon} type="button" onClick={onClose}>
               <GrClose size={18} />
             </button>

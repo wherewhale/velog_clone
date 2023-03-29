@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import Link from 'next/link';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
@@ -44,6 +45,9 @@ const Sorting: React.FC = () => {
               <div className={cx(styles.rankWrapper, { [styles.isSelected]: tab === 'NEW' })} onClick={onClick('NEW')}>
                 최신
               </div>
+              <Link href="/modal">
+                <div className={cx(styles.rankWrapper)}>모달 컴포넌트 보러가기</div>
+              </Link>
             </div>
             <div className={cx(styles.underBar, styles[underBar])} />
           </div>
