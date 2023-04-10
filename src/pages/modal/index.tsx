@@ -5,6 +5,8 @@ import Tab from '@/containers/home/tab';
 
 import styles from './modalPage.module.scss';
 
+//Dialog를 만들면 좋겠군요 (header부터 footer 레이아웃이 있고)
+
 const ModalTestPage = () => {
   return (
     <div className={styles.container}>
@@ -13,7 +15,11 @@ const ModalTestPage = () => {
         height={500}
         isOutClose={true}
         background="rgba(255,255,255,0.5)"
-        modalElement={<div className={styles.button}>바깥 눌렀을 때 꺼지는 친구</div>}
+        modalElement={
+          <div role={'button'} /* 오 role 넣을 수 있는 거 처음 알았다. */ className={styles.button}>
+            바깥 눌렀을 때 꺼지는 친구
+          </div>
+        }
       >
         <div className={styles.modal}>
           <h1 className={styles.title}>밖을 눌러보세요!</h1>

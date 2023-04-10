@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
 
-import Header from '@/components/header';
+import Header from '@/components/header/Header';
 import { getPost } from '@/services/post/api';
 
 interface IPostProps {

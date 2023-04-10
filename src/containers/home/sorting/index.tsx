@@ -48,6 +48,9 @@ const Sorting: React.FC = () => {
               <Link href="/modal">
                 <div className={cx(styles.rankWrapper)}>모달 컴포넌트 보러가기</div>
               </Link>
+              <Link href="/header">
+                <div className={cx(styles.rankWrapper)}>헤더 컴포넌트 구현</div>
+              </Link>
             </div>
             <div className={cx(styles.underBar, styles[underBar])} />
           </div>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Header from '@/components/header';
+import { Header } from '@/components/header';
 import Layout from '@/components/layout';
 import Sorting from '@/containers/home/sorting';
 
@@ -13,8 +13,8 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Header />
+      <main style={{ paddingTop: '4rem' }}>
+        <Header isTop={true} />
         <Layout>
           <Sorting />
         </Layout>
