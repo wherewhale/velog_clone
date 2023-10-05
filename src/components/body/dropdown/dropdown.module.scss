@@ -1,0 +1,41 @@
+@use 'src/styles/theme/color' as c;
+
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .itemContainer {
+    width: max-content;
+    height: auto;
+
+    .label {
+      display: flex;
+      width: 100%;
+      height: 30px;
+      border: 1px solid c.$C_border1;
+      text-align: left;
+      padding: 10px;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 2s;
+    }
+
+    .itemWrapper {
+      width: 100%;
+      height: 30px;
+      text-align: left;
+      border: 1px solid c.$C_border1;
+
+      &:hover {
+        background-color: c.$C_bg-element6;
+        color: c.$C_text4;
+      }
+
+      &.closed {
+        display: none;
+      }
+    }
+  }
+}

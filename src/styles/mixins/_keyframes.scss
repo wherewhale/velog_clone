@@ -1,0 +1,35 @@
+@mixin zoomIn() {
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin unfoldOut() {
+  @keyframes unfoldOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scaleX(1) scaleY(0.005);
+    }
+    100% {
+      transform: scaleX(0) scaleY(0.005);
+    }
+  }
+}
+
+@mixin zoomOut() {
+  @keyframes zoomOut {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
+  }
+}

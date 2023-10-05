@@ -1,0 +1,42 @@
+@use 'src/styles/theme/color' as c;
+
+.container {
+  height: 4rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: c.$C_bg-element3;
+  z-index: 99;
+
+  &.top {
+    position: absolute;
+    background-color: transparent;
+    margin-top: 0;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 21px;
+
+    .button {
+      background-color: c.$C_bg-element5;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      color: c.$C_button_text;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use 'src/styles/theme/color' as c;
+// @use 'src/styles/mixins/keyframes' as k;
+
+// @include k.unfoldOut;
+// @include k.zoomOut;
+
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  border: 2px solid c.$C_border3;
+  border-radius: 10px;
+  background-color: c.$C_bg-element5;
+  z-index: 3; //오옹 개꿀
+  transition: border 1s;
+}
+
+.modalEnter {
+  transform: scale(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.modalEnterDone {
+  /* 초기 display: none 처럼 크기를 0 으로 하여 보여주지 않음*/
+  transform: scale(0);
+  /* 0.5 초 동안 애니메이션을 실행, 단 0.8초 지연시켜 0.8초 후에 애니메이션을 실행 */
+  animation: zoomIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleX(0) scaleY(0.005);
+  }
+  50% {
+    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대  */
+    transform: scaleX(1) scaleY(0.005);
+  }
+  100% {
+    /* 0.5 초간 세로 크기를 확대 */
+    transform: scaleY(1) scaleX(1);
+  }
+}
+/* Show modal content  */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

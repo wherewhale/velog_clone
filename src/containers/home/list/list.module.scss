@@ -1,0 +1,8 @@
+@use 'src/styles/theme/color' as c;
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  .skeleton {
+  }
+}

@@ -1,0 +1,11 @@
+//FIXME: 폰트 mixin 적용 방식 변경
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
